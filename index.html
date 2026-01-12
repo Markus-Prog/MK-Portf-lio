@@ -22,21 +22,24 @@
             --glass-border: rgba(255, 255, 255, 0);
         }
 
-        /* LOGO GIGANTE NO BACKGROUND */
+        /* LOGO GIGANTE NO BACKGROUND COM COR ORIGINAL */
         .bg-logo-overlay {
             position: fixed;
-            top: 50%;
+            top: 50;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 70vw;
+            width: 15vw;
             /* Tamanho da logo no fundo */
             height: auto;
-            opacity: 0.09;
-            /* Suavidade para estética premium */
+            opacity: 0.8;
+            /* Ajustado para aparecer a cor sem ofuscar o texto */
             z-index: -1;
             pointer-events: none;
-            filter: grayscale(100%) brightness(1.2);
+            display: block;
+            /* Removido o grayscale para manter a cor original */
+            filter: brightness(1.1);
         }
+
 
         * {
             margin: 0;
@@ -366,13 +369,13 @@
 </head>
 
 <body>
-    <img src="IMG/1767908951974.png" alt="Background Logo MK" class="bg-logo-overlay">
+    <img src="img/1767908951974.png" alt="Background Logo MK" class="bg-logo-overlay">
 
     <div class="glow-orb"></div>
 
     <header>
         <div class="logo-container">
-            <img src="IMG/1767908951974.png" alt="Logo Markus Anttony" class="logo-img">
+            <img src="img/1767908951974.png" alt="Logo Markus Anttony" class="logo-img">
             <div class="logo-text">Markus <span>Anttony</span></div>
         </div>
         <nav>
@@ -482,5 +485,6 @@
         document.addEventListener('DOMContentLoaded', type);
     </script>
 </body>
+
 
 </html>
