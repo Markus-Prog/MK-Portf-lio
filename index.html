@@ -195,6 +195,58 @@
     }
 }
 
+/* Botão Hambúrguer */
+.menu-toggle {
+    display: none; /* Escondido no computador */
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: var(--accent-color);
+    transition: 0.3s;
+}
+
+/* Ajustes para Celular */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex; /* Aparece no celular */
+        z-index: 1001;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%; /* Escondido fora da tela */
+        width: 70%;
+        height: 100vh;
+        background: rgba(5, 5, 5, 0.95);
+        backdrop-filter: blur(15px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: 0.5s;
+        z-index: 1000;
+    }
+
+    .nav-menu.active {
+        right: 0; /* Entra na tela quando clicado */
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .nav-menu a {
+        font-size: 1.5rem;
+    }
+}
+
         .hero {
             height: 70vh;
             display: flex;
